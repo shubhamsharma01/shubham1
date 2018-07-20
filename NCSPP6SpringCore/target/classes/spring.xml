@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xmlns:util="http://www.springframework.org/schema/util"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd      
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+    
+    
+    <bean id="s1" class="com.nucleus.Student"/>
+    <bean id="s2" class="com.nucleus.Student">
+    <property name="stdId" value="100"/>
+    <property name="stdName" value="abc"/>
+    <property name="subject" ref="sub1"/>
+    <property name="address" ref="add"/>
+    </bean>    
+    
+	<bean id="sub1" class="com.nucleus.Subject">
+    <property name="subId" value="1"/>
+    <property name="subName" value="java"/>
+    <property name="address" ref="add"/>
+    </bean>
+    
+    
+    <bean id="add" class="com.nucleus.Address">
+    <property name="add" value="asfasf"/>
+    </bean>
+    
+    </beans>
